@@ -55,6 +55,7 @@ main{
 .place-foto{
     max-width: 300px;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 .place-foto>img{
@@ -63,4 +64,29 @@ main{
 .place-text{
     display: flex;
     gap: 10px;
+}
+
+.colors{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.colors-card{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #321608;
+}
+.colors-card:nth-child(2){
+    background-color: #cbab96;
+}
+.colors-card:nth-child(3){
+    background-color: #e8d7bb;
+}
+.colors-card:nth-child(4){
+    background-color: #632c0e;
+}
+.colors-card:nth-child(5){
+    background-color: #7f4b23;
 }
