@@ -41,9 +41,9 @@ section{
     align-items: center;
     flex-direction: column;
     max-width: 300px;
-    border:  1px solid white;
+    border:  1px solid #cbab96;
     border-radius: 15px;
-    box-shadow: 15px 15px 15px rgb(224, 220, 220);
+    box-shadow: 15px 15px 15px #d4d3d0;
 }
 
 .card:hover{
@@ -108,4 +108,29 @@ section{
 }
 .colors-card:nth-child(5){
     background-color: #7f4b23;
+}
+
+
+.plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px
+}
+
+.plan-item{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    border:solid #eadecf 2px;
+    border-radius: 30px;
+  
+}
+.plan-item>span{
+    color: white;
+    background-color: #eadecf ;
+    border-radius: 28px;
+    padding: 30px;
 }
