@@ -8,7 +8,7 @@ main{
     font-family: sans-serif;
     flex-direction: column;
     align-items: center;
-    
+    width: 360px;
 
 }
 
@@ -68,11 +68,14 @@ section{
     gap: 10px;
 }
 .place-foto>img{
-    max-width: 150px;
+    max-width: 300px;
 }
 .place-text{
     display: flex;
-    gap: 10px;
+    transform: translate(0,50px);
+    align-items: center;
+    border:solid #eadecf 2px;
+    border-radius: 30px;
 }
 
 
@@ -133,4 +136,8 @@ section{
     background-color: #eadecf ;
     border-radius: 28px;
     padding: 30px;
+}
+
+.feedback{
+    
 }
