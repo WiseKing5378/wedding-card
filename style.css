@@ -168,10 +168,11 @@ section{
 }
 
 .timer {
-  display: grid;
-  grid-template-columns: 4.5rem 0.5rem 4.5rem 0.5rem 4.5rem 0.5rem 4.5rem;
+  display: flex;
+  gap:5 px;
   font-size: 3rem;
   justify-items: center;
+  justify-content: center;
 }
 
 .timer__item {
