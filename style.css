@@ -163,9 +163,23 @@ section{
     padding: 30px;
 }
 
-.feedback{
 
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:15px
 }
+.form input{
+    padding: 15px;
+    border:solid #eadecf 2px;
+    border-radius: 30px
+}
+.checkbox{
+    border:solid #eadecf 2px;
+}
+
 
 .timer {
   display: flex;
