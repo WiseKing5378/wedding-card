@@ -152,13 +152,13 @@ section{
     display: flex;
     align-items: center;
     gap:20px;
-    border:solid #eadecf 2px;
+    border:solid #bd8459 2px;
     border-radius: 30px;
   
 }
 .plan-item>span{
     color: white;
-    background-color: #eadecf ;
+    background-color: #bd8459 ;
     border-radius: 28px;
     padding: 30px;
 }
@@ -173,11 +173,11 @@ section{
 }
 .form input{
     padding: 15px;
-    border:solid #eadecf 2px;
+    border:solid #bd8459 2px;
     border-radius: 30px
 }
 .checkbox{
-    border:solid #eadecf 2px;
+    accent-color: #bd8459;
 }
 
 
