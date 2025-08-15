@@ -181,6 +181,10 @@ section{
     border:solid #bd8459 2px;
     border-radius: 30px
 }
+.form input:last-child{
+    background-color: #bd8459;
+    color: white;
+}
 .checkbox{
     accent-color: #bd8459;
 }
