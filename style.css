@@ -166,3 +166,25 @@ section{
 .feedback{
 
 }
+
+.timer {
+  display: grid;
+  grid-template-columns: 4.5rem 0.5rem 4.5rem 0.5rem 4.5rem 0.5rem 4.5rem;
+  font-size: 3rem;
+  justify-items: center;
+}
+
+.timer__item {
+  position: relative;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: #424242;
+}
