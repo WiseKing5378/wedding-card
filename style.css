@@ -1,11 +1,13 @@
 *{
     padding: 0px;
     margin: 0px;
+    font-family: montserrat;
+
 }
 
 main{
     display: flex;
-    font-family: sans-serif;
+
     flex-direction: column;
     align-items: center;
     width: 360px;
@@ -35,6 +37,18 @@ section{
     align-items: center;
 }
 
+.data{
+     width: 180px;
+     padding: 10px;
+     background: #bd8459;
+     color: white;
+     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    border-radius: 30px;
+}
 
 .card{
     display: flex;
@@ -61,21 +75,33 @@ section{
 }
 
 
-.place-foto{
-    max-width: 300px;
+.place{
+    gap: 5px;
+}
+
+.place-sec{
     display: flex;
     justify-content: center;
-    gap: 10px;
-}
-.place-foto>img{
-    max-width: 300px;
-}
-.place-text{
-    display: flex;
-    transform: translate(0,50px);
     align-items: center;
-    border:solid #eadecf 2px;
-    border-radius: 30px;
+    width: 360px;
+    height: 250px;
+    background-size: 100%;
+}
+.church{
+    background-image: url(church.webp);
+}
+.cafe{
+    background-image: url(cafe.webp);
+}
+.place-content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    background-color: white;
 }
 
 
@@ -139,5 +165,5 @@ section{
 }
 
 .feedback{
-    
+
 }
