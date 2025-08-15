@@ -28,7 +28,12 @@ section{
     width: 100%;
 }
 
-
+.q{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 10px;
+}
 .invitation-text{
     display: flex;
     flex-direction: column;
