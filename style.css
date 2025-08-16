@@ -140,7 +140,7 @@ section{
 .colors{
     display: flex;
     justify-content: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .colors-card{
