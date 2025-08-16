@@ -28,6 +28,12 @@ section{
     width: 100%;
 }
 
+.invitation{
+    background: url(bg.jpg);
+    background-position: center;
+    color:white
+}
+
 .q{
     display: flex;
     align-items: center;
@@ -59,6 +65,8 @@ section{
     align-items: center;
     flex-direction: column;
     max-width: 300px;
+    background-color:white;
+    color:black;
     border:  1px solid #cbab96;
     border-radius: 15px;
     box-shadow: 15px 15px 15px #d4d3d0;
