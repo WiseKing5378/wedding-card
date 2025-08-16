@@ -1,12 +1,12 @@
 @font-face {
   font-family: "NefelibataBrush";
-  src: url("font/Nefelibata-Brush.otf") format("opentype");
+  src: url("font/Nefelibata-Sans.otf") format("opentype");
 }
 
 *{
     padding: 0px;
     margin: 0px;
-    
+    font-family: "NefelibataBrush";
 
 }
 
