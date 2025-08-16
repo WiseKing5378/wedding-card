@@ -28,6 +28,12 @@ section{
     width: 100%;
 }
 
+.invitation{
+    background: url(bg.jpg);
+    background-position: center;
+    color:white
+}
+
 .q{
     display: flex;
     align-items: center;
