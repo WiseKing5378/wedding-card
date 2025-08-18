@@ -81,7 +81,7 @@ console.log(message)
         text: message, // Текст сообщения
         parse_mode: 'HTML' // Режим парсинга HTML
     };
-
+modal.innerHTML = '<div class="modal-content"><p>Отправка данных...</p></div>';
     // Отправляем данные с помощью fetch API
     return fetch(apiUrl, {
         method: 'POST', // Метод отправки
@@ -90,6 +90,7 @@ console.log(message)
         },
         body: JSON.stringify(params) // Преобразуем параметры в JSON
     }).then(response => response.json()); // Возвращаем ответ в формате JSON
+    
 }
 
 // Обработчик события отправки формы
@@ -104,13 +105,13 @@ addEventListener('submit', (e) => {
         // Показать состояние загрузки
         modal.innerHTML = '<div class="modal-content"><p>Отправка данных...</p></div>';
         console.log(modal)
-        // modal.style.display = 'block';
 
         // Отправляем данные в Telegram
         sendDataToTelegram(formData)
             .then(result => {
                 if (result.ok) {
                     // Если данные успешно отправлены
+                     console.log('11')
                     modal.innerHTML = '<div class="modal-content"><p>Ваша анкета успешно отправлена</p></div>';
                 } else {
                     // Если произошла ошибка при отправке
@@ -126,7 +127,7 @@ addEventListener('submit', (e) => {
             .finally(() => {
                 // Закрываем модальное окно и сбрасываем форму через 3 секунды
                 setTimeout(() => {
-                    modal.style.display = 'none';
+                    // modal.style.display = 'none';
                     form.reset(); // Сброс формы
                 }, 3000);
             });
