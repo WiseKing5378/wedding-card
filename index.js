@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const form = document.getElementsByClassName('form')
-const modal = document.getElementsByClassName('modal');
-console.log(modal)
+const modal = document.getElementById('modal');
+
 
 
 
@@ -66,22 +66,23 @@ function sendDataToTelegram(formData) {
     const chatId = '-4860432464'; // ID получателя (пользователя)
     const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`; // URL для отправки сообщения
 
-    // Формируем сообщение в формате HTML
+
     const message = `
 📩 Вам новая заявка:
 <b>Имя:</b> ${formData.name}
 
 <b>Телефон:</b> ${formData.phone}
 
+<b>Необходимо размещение:</b> ${formData.home}
+
     `;
-console.log(message)
-    // Параметры, которые будем отправлять
+
     const params = {
         chat_id: chatId, // ID чата
         text: message, // Текст сообщения
         parse_mode: 'HTML' // Режим парсинга HTML
     };
-modal.innerHTML = '<div class="modal-content"><p>Отправка данных...</p></div>';
+
     // Отправляем данные с помощью fetch API
     return fetch(apiUrl, {
         method: 'POST', // Метод отправки
@@ -93,43 +94,20 @@ modal.innerHTML = '<div class="modal-content"><p>Отправка данных..
     
 }
 
-// Обработчик события отправки формы
+
 addEventListener('submit', (e) => {
-    e.preventDefault(); // Отменяем стандартное поведение формы
-    if (true) { // Проверяем форму на валидность
-        const formData = { // Собираем данные из формы
+    e.preventDefault();
+
+        const formData = { 
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
+            home: document.getElementById('home').checked ? 'да': 'нет',
         };
 
-        // Показать состояние загрузки
-        modal.innerHTML = '<div class="modal-content"><p>Отправка данных...</p></div>';
-        console.log(modal)
-
-        // Отправляем данные в Telegram
         sendDataToTelegram(formData)
             .then(result => {
-                if (result.ok) {
-                    // Если данные успешно отправлены
-                     console.log('11')
-                    modal.innerHTML = '<div class="modal-content"><p>Ваша анкета успешно отправлена</p></div>';
-                } else {
-                    // Если произошла ошибка при отправке
-                    console.log('errorr')
-                    modal.innerHTML = '<div class="modal-content"><p>Ошибка при отправке анкеты. Пожалуйста, попробуйте еще раз.</p></div>';
-                }
+                    document.getElementById('form').style.display = 'none'
+                    document.getElementById('modal').style.display = 'flex'
             })
-            .catch(error => {
-                console.error('Error:', error);
-                // Обработка ошибки
-                modal.innerHTML = '<div class="modal-content"><p>Произошла ошибка. Пожалуйста, попробуйте позже.</p></div>';
-            })
-            .finally(() => {
-                // Закрываем модальное окно и сбрасываем форму через 3 секунды
-                setTimeout(() => {
-                    // modal.style.display = 'none';
-                    form.reset(); // Сброс формы
-                }, 3000);
-            });
-    }
+
 });

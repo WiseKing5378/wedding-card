@@ -231,3 +231,12 @@ section{
   font-size: 0.875rem;
   color: #424242;
 }
+
+
+#modal{
+    display: none;
+    padding: 15px;
+    border:solid #bd8459 2px;
+    border-radius: 30px;
+    background-color: white;
+}
