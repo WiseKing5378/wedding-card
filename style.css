@@ -6,7 +6,7 @@
 *{
     padding: 0px;
     margin: 0px;
-
+    text-decoration: none;
 }
 
 
@@ -101,29 +101,34 @@ section{
 
 .place-sec{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+.place-sec img{
     width: 330px;
     height: 250px;
-    background: no-repeat center / contain;
-  
 }
-.church{
-    background-image: url(church1.jpg);
-}
-.cafe{
-    background-image: url(cafe.webp);
-}
+
+
 .place-content{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 150px;
+    align-items: center;
+}
+.place-content a{
+    margin-top: 15px;
+}
+.map{
+    text-decoration: none;
+    color: black;
+        padding: 15px;
+    border:solid #bd8459 2px;
+    border-radius: 30px;
     background-color: white;
 }
+
 
 .color, .feedback, .place{
     background-color: #e7dad0;
