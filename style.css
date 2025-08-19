@@ -103,8 +103,11 @@ section{
     display: flex;
     flex-direction: column;
     background: white;
+    
+    border-radius: 15px;
 }
 .place-sec img{
+    border-radius: 15px  15px 0 0;
     width: 330px;
     height: 250px;
 }
@@ -118,7 +121,7 @@ section{
     align-items: center;
 }
 .place-content a{
-    margin-top: 15px;
+    margin: 15px 0;
 }
 .map{
     text-decoration: none;
